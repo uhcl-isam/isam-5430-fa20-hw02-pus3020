@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.Tracing;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -31,6 +33,33 @@ namespace CSharp.Assignments.Loop1
             char fillChar = Char.Parse(Console.ReadLine());
 
             // Write your codes here.
+            string fillCharSpace = fillChar + " ";
+            string Space = " ";
+            int Quit = 0;
+            int Counter = 0;
+            while (Quit == num)
+            {
+                if (num % 2 != 0)
+                {
+                    while (Quit == num)
+                    {
+                        Console.WriteLine(fillCharSpace);
+                        Quit ++;
+                        Counter ++;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(Space);
+                    while (Quit == num)
+                    {
+                        Console.Write(fillCharSpace);
+                        Quit ++;
+                        Counter ++;
+                    }
+                }
+                Counter = 1;
+            }
         }
     }
 }
