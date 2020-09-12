@@ -31,6 +31,42 @@ namespace CSharp.Assignments.Loop1
 
             // Write your codes here.
             Console.ReadLine();
+            for (int rowA = 0; rowA < n; rowA++)
+            {
+                for (int columnA = 0; columnA < rowA; columnA++)
+                {
+                    Console.Write(t);
+                }
+            }
+            for (int rowB = 0; rowB < n; rowB++)
+            {
+                for (int columnB = 0; columnB < rowB; columnB++)
+                {
+                    Console.Write(" ");
+                }
+                for (int columnB = 0; columnB < n - rowB; columnB++)
+                {
+                    Console.Write(t);
+                }
+            }
+            for (int rowC = n; rowC > 0; rowC--)
+            {
+                for (int columnC = 0; columnC < rowC; columnC++)
+                {
+                    Console.Write(t);
+                }
+            }
+            for (int rowD = n; rowD > 0; rowD--)
+            {
+                for (int columnD = 0; columnD < rowD; columnD++)
+                {
+                    Console.Write(" ");
+                }
+                for (int columnD = 0; columnD < n - rowD; columnD++)
+                {
+                    Console.Write(t);
+                }
+            }
         }
     }
 }

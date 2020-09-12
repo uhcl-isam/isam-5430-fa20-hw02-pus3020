@@ -39,7 +39,6 @@ namespace CSharp.Assignments.Loop1
                 int credit = int.Parse(Console.ReadLine());
                 Console.Error.WriteLine("Please enter the credit limit.");
                 int limit = int.Parse(Console.ReadLine());
-                int quit = 0;
                 int newBalance = (balance + charge - credit);
                 if (newBalance > limit)
                 {

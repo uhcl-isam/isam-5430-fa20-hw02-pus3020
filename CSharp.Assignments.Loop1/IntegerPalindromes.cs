@@ -19,6 +19,30 @@ namespace CSharp.Assignments.Loop1
         {
             // enter sentinel inputs
             // then check the palindrome only once.
+            string numberForward = "";
+            string numberBackward = "";
+            int index = 0;
+            Console.Error.WriteLine("Enter a 9 digits number.");
+            numberForward = Console.ReadLine();
+            while (numberForward.Length == 9)
+            {
+                Console.Error.WriteLine("Enter a 9 digits number.");
+                numberForward = Console.ReadLine();
+            }
+            index = numberForward.Length - 1;
+            while (index >= 0)
+            {
+                numberBackward += numberForward.Substring(index, 1);
+                index--;
+            }
+            if (numberForward == numberBackward)
+            {
+                Console.WriteLine("a palindrome");
+            }
+            else
+            {
+                Console.WriteLine("not a palindrome");
+            }
         }
     }
 }

@@ -44,8 +44,8 @@ namespace CSharp.Assignments.Loop1
                 Quit = int.Parse(Console.ReadLine());
             }
             Mileage = Convert.ToDecimal(SumMiles) / SumGallons;
-            Console.Error.WriteLine($"The mileage is {Mileage} per gallon.");
-            Console.Error.WriteLine($"The total milage is {SumMiles}.");
+            Console.WriteLine($"The mileage is {Mileage} per gallon.");
+            Console.WriteLine($"The total milage is {SumMiles}.");
         }
     }
 }

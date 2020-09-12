@@ -14,6 +14,13 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            int number = 0;
+            Console.Error.WriteLine("Enter a number");
+            number = int.Parse(Console.ReadLine());
+            for (int i = 0; i < number; i++)
+            {
+
+            }
         }
     }
 }
