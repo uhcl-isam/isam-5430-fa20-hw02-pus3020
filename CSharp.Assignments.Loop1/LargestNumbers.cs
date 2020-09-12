@@ -26,28 +26,38 @@ namespace CSharp.Assignments.Loop1
             // write your codes here
             int number = 0;
             int counter = 0;
-            int largest = 0;
-            int largest2 = 0;
+            int largest;
+            int largest2;
             for (counter = 0; counter < 10; counter++)
             {
                 Console.Error.WriteLine("Enter a number");
                 number = int.Parse(Console.ReadLine());
+                largest = number;
                 if (counter == 0)
                 {
                     largest = number;
                 }
-                else
+                if (counter == 1)
                 {
-                    if (number > largest)
+                    if (largest > number)
+                    {
+                        largest2 = number;
+                    }
+                    if (largest < number)
                     {
                         largest2 = largest;
                         largest = number;
                     }
+                    else
+                    {
+                        if (number > largest)
+                        {
+                            largest2 = largest;
+                            largest = number;
+                        }
+                    }
                 }
             }
-            Console.WriteLine(largest);
-            Console.Write(largest2);
-  
         }
     }
 }
