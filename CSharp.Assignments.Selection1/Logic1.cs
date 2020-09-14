@@ -213,12 +213,36 @@ namespace CSharp.Assignments.Loop1
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+            if (vacation is true)
+            {
+                if (dayOfWeek == 0 || dayOfWeek == 6)
+                {
+                    return "off";
+                }
+                else
+                {
+                    return "10:00";
+                }
+            }
+            else
+            {
+                if (dayOfWeek == 0 || dayOfWeek == 6)
+                {
+                    return "10:00";
+                }
+                else
+                {
+                    return "7:00";
+                }
+            }
         }
 
 
         /// <summary>
-        /// Your cell phone rings.Return true if you should answer it. Normally you answer, except in the morning you only answer if it is your mom calling.In all cases, if you are asleep, you do not answer.
+        /// Your cell phone rings.Return true if you should answer it. Normally you answer, 
+        /// except in the morning you only answer if it is your mom calling.In all cases, 
+        /// if you are asleep, you do not answer.
         /// </summary>
         /// <param name="isMorning"></param>
         /// <param name="isMom"></param>
@@ -226,7 +250,29 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+            if (isAsleep is true)
+            {
+                return false;
+            }
+            else
+            {
+                if (isMorning is true)
+                {
+                    if (isMom is true)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
 
 
@@ -244,7 +290,10 @@ namespace CSharp.Assignments.Loop1
         }
 
         /// <summary>
-        /// Given three ints, a b c, return true if one of b or c is "close" (differing from a by at most 1), while the other is "far", differing from both other values by 2 or more. Note: Math.abs(num) computes the absolute value of a number.
+        /// Given three ints, a b c, return true if one of b or c is "close" 
+        /// (differing from a by at most 1), while the other is "far", differing 
+        /// from both other values by 2 or more. Note: Math.abs(num) computes the
+        /// absolute value of a number.
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
@@ -252,7 +301,20 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool CloseFar(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+            if (Math.Abs(a - b) <= 1 && Math.Abs(a - c) >= 2)
+            {
+                return true;
+            }
+            else if (Math.Abs(a - c) <= 1 && Math.Abs(a - b) >= 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }

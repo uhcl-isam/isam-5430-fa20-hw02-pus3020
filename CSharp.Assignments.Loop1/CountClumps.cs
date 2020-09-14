@@ -17,6 +17,15 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            int sum = 0;
+            int numbers;
+            while (true)
+            {
+                Console.Error.WriteLine("Enter numbers");
+                numbers = int.Parse(Console.ReadLine());
+                sum += sum;
+                break;
+            }
 
         }
     }
