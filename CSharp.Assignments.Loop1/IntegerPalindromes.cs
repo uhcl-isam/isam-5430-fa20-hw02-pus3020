@@ -21,7 +21,7 @@ namespace CSharp.Assignments.Loop1
             // then check the palindrome only once.
             string numberForward = "";
             string numberBackward = "";
-            int index = 0;
+            int index = 0; 
             Console.Error.WriteLine("Enter a 9 digits number.");
             numberForward = Console.ReadLine();
             while (numberForward.Length == 9)
