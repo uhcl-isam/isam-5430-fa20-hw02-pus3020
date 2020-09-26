@@ -13,7 +13,7 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             Console.WriteLine("Enter the last number of Fibonacci Sequence of numbers.");
-            int end = int.Parse(Console.ReadLine());
+            int end = int.Parse(Console.ReadLine()); 
             
         }
     }
